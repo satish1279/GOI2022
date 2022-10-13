@@ -10,15 +10,16 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/resources/FeatureFilesGoi2022",
+		features= {"./src/test/resources/FeatureFilesGoi2022"},
 		glue= {"stepDefinitionsGoi2022"},
-		
-		monochrome=true
-		
+		//tags= "@Staging",
+		plugin= {"pretty"}
+	//	dryRun = true
 		
 		
 		)
 
+//features= {"src/test/resources/FeatureFilesGoi2022"}, , @Production
 
 
 

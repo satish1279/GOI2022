@@ -1,3 +1,4 @@
+@Production
 Feature: To test all the pages on Goi Production-India environment
 
   Scenario: To test all the pages on Goi Production-India environment

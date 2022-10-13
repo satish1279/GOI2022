@@ -37,7 +37,7 @@ public class PageElements {
 	@FindBy(css="a[title='Logout']")
 	WebElement btn_logOut;
 
-	@FindBy(xpath="button[class='btn_filled btn_filled_primary']")
+	@FindBy(css="button[class='btn_filled btn_filled_primary']")
 	WebElement btn_OK;
 
 
