@@ -82,7 +82,7 @@ public class PomProduction {
 	@AfterStep
 
 	public void takeScreenshot() throws IOException, InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		String timestamp = new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date());
 
@@ -108,19 +108,20 @@ public class PomProduction {
 
 
 	@When ("^User is logged in after entering the correct credentials wrt Ind_Production$")
-	public void enterUsername() {
+	public void enterUsername() throws InterruptedException {
 
 		pages =  new PageElements(driver);
 
 		pages.entrUsernam();
 		pages.entrPassword();
-		pages.clikButon();
+		pages.clikButon();	
 	}
 
 
 	//	=========	Recognize Page  ========
 	@And ("^Clicks on Recognize link wrt Ind_Production$")
 	public void recogLink() throws InterruptedException {
+
 		//System.out.println("test");
 		//pages.clickRecognize();
 		logger.info("This is Recognize page");
@@ -161,7 +162,7 @@ public class PomProduction {
 	@And ("^Clicks on My Summary link wrt Ind_Production$")
 	public void MySummaryLink() throws InterruptedException {
 		System.out.println("test");
-	//	pages.clickMySummary();
+		//pages.clickMySummary();
 		logger.info("This is My Summary page");
 
 	}
@@ -170,7 +171,7 @@ public class PomProduction {
 	@When ("^Clicks on Redeem link wrt Ind_Production$")
 	public void RedeemLink() throws InterruptedException {
 		System.out.println("test");
-		//pages.clickRedeem();
+		//	pages.clickRedeem();
 		logger.info("This is Redeem page");
 	}
 
@@ -179,7 +180,7 @@ public class PomProduction {
 	@And ("^Clicks on Dashboard link wrt Ind_Production$")
 	public void DashboardLink() throws InterruptedException {
 		System.out.println("test");
-		//pages.clickDashboard();	
+		pages.clickDashboard();	
 		logger.info("This is Dashboard page");
 	}
 
@@ -187,7 +188,7 @@ public class PomProduction {
 	@When ("^Clicks on Reports tab wrt Ind_Production$")
 	public void ReportTab() throws InterruptedException {
 		System.out.println("test");
-		//pages.clickReports();
+		pages.clickReports();
 		logger.info("This is Reports page");
 	}
 
@@ -195,10 +196,11 @@ public class PomProduction {
 	public void clickBudgetHeadReport() throws InterruptedException {
 		System.out.println("test");
 
-//		pages.clickSelectReportDropdown();
-//		Thread.sleep(1000);
-//		pages.clickBudgetHeadReport();
-//		logger.info("This is Budget Head Report page");
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickBudgetHeadReport();
+		Thread.sleep(1000);
+		logger.info("This is Budget Head Report page");
 
 	}
 
@@ -206,20 +208,22 @@ public class PomProduction {
 	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt Ind_Production$")
 	public void clickRecognitionsReport() throws InterruptedException {
 		System.out.println("test");
-//		pages.clickSelectReportDropdown();
-//		Thread.sleep(1000);
-//		pages.clickRecognitionsReport();
-//		logger.info("This is Recognitions Report page");
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickRecognitionsReport();
+		Thread.sleep(5000);
+		//		logger.info("This is Recognitions Report page");
 
 	}
 
 	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt Ind_Production$")
 	public void clickRedemptionReport() throws InterruptedException {
 		System.out.println("test");
-//		pages.clickSelectReportDropdown();
-//		Thread.sleep(1000);
-//		pages.clickRedemptionReport();
-//		logger.info("This is Redemption Report page");
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickRedemptionReport();
+		Thread.sleep(3000);
+		logger.info("This is Redemption Report page");
 
 	}
 
@@ -228,9 +232,10 @@ public class PomProduction {
 
 		System.out.println("test");
 
-//		pages.clickSelectReportDropdown();
-//		Thread.sleep(1000);
-//		pages.clickUserLoginReport();
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickUserLoginReport();
+
 		logger.info("This is User Login Report page");
 
 	}
@@ -241,7 +246,7 @@ public class PomProduction {
 
 		System.out.println("test");
 
-		//pages.clickVisualization();
+		pages.clickVisualization();
 		logger.info("This is Data Visualization page");
 
 	}
@@ -256,9 +261,10 @@ public class PomProduction {
 		Thread.sleep(2000);
 
 		pages.clicklogOut();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		pages.clickOkBtn();
+		Thread.sleep(2000);
 
 		logger.info("This is LogOut page");
 	}

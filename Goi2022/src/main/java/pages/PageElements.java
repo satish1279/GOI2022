@@ -1,196 +1,228 @@
 package pages;
 
 
+
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PageElements {
+
+
+
+	WebDriver driver;
+
+
+	//============== Login ============//
+
+	@FindBy(xpath="//input[@name='username']")
+	WebElement txt_usrname;
+
+	@FindBy(xpath="//input[@name='password']")
+	WebElement txt_password;
+
+	@FindBy(css="#cred_sign_in_button")
+	WebElement btn_login;
+
+
+
+	//============== Log Out ============//
+
+	@FindBy(xpath="//a[@class='user-profile dropdown-toggle ng-isolate-scope']//img[@class='ng-scope']")
+	WebElement image_userProfile;
+
+	@FindBy(css="a[title='Logout']")
+	WebElement btn_logOut;
+
+	@FindBy(xpath="button[class='btn_filled btn_filled_primary']")
+	WebElement btn_OK;
+
+
+
+
+	//============== All Pages ============//
+
+	@FindBy(xpath="//a[@class='cursorPointer'and @href='Recognize/Recognize']//span[@class='ng-binding'][contains(text(),'Recognize')]")
+	WebElement link_recognize;
+
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='Feedback/Index']//span[@class='ng-binding'][contains(text(),'Skill Insight')]")
+	WebElement link_skillInsight;
+
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='Wellness/index']//span[@class='ng-binding'][contains(text(),'Wellness')]")
+	WebElement link_wellness;
+
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='Survey/Index']//span[@class='ng-binding'][contains(text(),'Survey')]")
+	WebElement link_survey;
+
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='managejob/index']//span[@class='ng-binding'][contains(text(),'Job Referral')]")
+	WebElement link_jobReferral;
+
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='Home/viewProfile']//span[@class='ng-binding'][contains(text(),'My Summary')]")
+	WebElement link_mySummary;
+
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='Redeem/RedeemPlus']//span[@class='ng-binding'][contains(text(),'Redeem')]")
+	WebElement link_redeem;
+
 	
 	
 
-	import org.openqa.selenium.By;
-	import org.openqa.selenium.WebDriver;
 
-	public class PageElements {
+	//============== Reports ============//
+	
+	@FindBy(xpath="//a[@class='cursorPointer'][@href='Dashboard/Dashboard']//span[@class='ng-binding'][contains(text(),'Dashboard')]")
+	WebElement link_dashboard; 
 
 
 
-		WebDriver driver;
+	@FindBy(xpath="//ul[@class='horizontal_block_tab_menu clearfix']/li[3]/a[1]")
+	WebElement tab_reports;
 
+	@FindBy(xpath="//*[@class='sort-by res-sort clearfix dash_sort _visu']/li[2]")
+	WebElement dropdown_selectReports;
 
-		//============== Background ============//
+	@FindBy(xpath="//*[@class='k-list-scroller']/ul[1]/li[3]/span[1]/h2[1]")
+	WebElement report_BudgetHeadReport;
 
-		By txt_usrname=By.xpath("//input[@name='username']");
+	@FindBy(xpath="//*[@class='k-list-scroller']/ul[1]/li[12]/span[1]/h2[1]")
+	WebElement report_RecognitionsReport;
 
-		By txt_password=By.xpath("//input[@name='password']");
+	@FindBy(xpath="//*[@class='k-list-scroller']/ul[1]/li[14]/span[1]/h2[1]")
+	WebElement report_RedemptionReport;
 
-		By btn_login=By.cssSelector("#cred_sign_in_button");
+	@FindBy(xpath="//*[@class='k-list-scroller']/ul[1]/li[20]/span[1]/h2[1]")
+	WebElement report_UserLoginReport;
 
 
-		public PageElements(WebDriver driver1) {
-			this.driver=driver1;
-		}
+	@FindBy(xpath="//ul[@class='horizontal_block_tab_menu clearfix']/li[2]/a[1]")
+	WebElement tab_DataVisualization;
 
-		public void entrUsernam() {
-			driver.findElement(txt_usrname).sendKeys("satish.jaiswal@beyond360.com");
-		}
 
-		public void entrPassword() {
 
-			driver.findElement(txt_password).sendKeys("pass@12345");
-		}
 
-		public void clikButon() {
-			driver.findElement(btn_login).click();
-		}
+	//============== Constructor ============//
 
 
+	public PageElements(WebDriver driver) {
+		this.driver=driver;
 
-
-
-
-		//============== Log Out ============//
-
-
-		By link_Homepage=By.xpath("//a[@class='cursorPointer'][@href='Home/Index']//span[@class='ng-binding'][contains(text(),'Home')]");
-
-		By image_userProfile=By.xpath("//a[@class='user-profile dropdown-toggle ng-isolate-scope']//img[@class='ng-scope']");
-
-		By btn_logOut=By.cssSelector("a[title='Logout']");
-
-		By btn_OK=By.cssSelector("button[class='btn_filled btn_filled_primary']");
-
-
-
-		public void clickHomepage() {	
-			driver.findElement(link_Homepage).click();		
-		}
-
-		public void clickUserprofile() {	
-			driver.findElement(image_userProfile).click();		
-		}
-
-		public void clicklogOut() {	
-			driver.findElement(btn_logOut).click();		
-		}	
-
-		public void clickOkBtn() {	
-			driver.findElement(btn_OK).click();		
-		}
-
-
-
-
-
-
-
-
-		//============== All Pages ============//
-
-		By link_recognize=By.xpath("//a[@class='cursorPointer'and @href='Recognize/Recognize']//span[@class='ng-binding'][contains(text(),'Recognize')]");
-
-		By link_skillInsight=By.xpath("//a[@class='cursorPointer'][@href='Feedback/Index']//span[@class='ng-binding'][contains(text(),'Skill Insight')]");
-
-		By link_wellness=By.xpath("//a[@class='cursorPointer'][@href='Wellness/index']//span[@class='ng-binding'][contains(text(),'Wellness')]");
-
-		By link_survey=By.xpath("//a[@class='cursorPointer'][@href='Survey/Index']//span[@class='ng-binding'][contains(text(),'Survey')]");
-
-		By link_jobReferral=By.xpath("//a[@class='cursorPointer'][@href='managejob/index']//span[@class='ng-binding'][contains(text(),'Job Referral')]");
-
-		By link_mySummary=By.xpath("//a[@class='cursorPointer'][@href='Home/viewProfile']//span[@class='ng-binding'][contains(text(),'My Summary')]");
-
-
-		By link_redeem=By.xpath("//a[@class='cursorPointer'][@href='Redeem/RedeemPlus']//span[@class='ng-binding'][contains(text(),'Redeem')]");
-
-
-
-		public void clickRecognize() {	
-			driver.findElement(link_recognize).click();
-		}
-
-		public void clickSkillInsight() {	
-			driver.findElement(link_skillInsight).click();
-		}
-
-		public void clickWellness() {	
-			driver.findElement(link_wellness).click();
-		}
-
-		public void clickSurvey() {	
-			driver.findElement(link_survey).click();
-		}
-
-		public void clickJob() {	
-			driver.findElement(link_jobReferral).click();
-		}
-
-		public void clickMySummary() {	
-			driver.findElement(link_mySummary).click();
-		}
-
-
-
-		public void clickRedeem() {	
-			driver.findElement(link_redeem).click();
-		}
-
-
-
-
-		//============== Reports ============//
-
-		By link_dashboard=By.xpath("//a[@class='cursorPointer'][@href='Dashboard/Dashboard']//span[@class='ng-binding'][contains(text(),'Dashboard')]");
-
-		By tab_DataVisualization=By.xpath("//ul[@class='horizontal_block_tab_menu clearfix']/li[2]/a[1]");
-
-		By tab_reports=By.xpath("//ul[@class='horizontal_block_tab_menu clearfix']/li[3]/a[1]");
-		
-
-		By dropdown_selectReports=By.xpath("//*[@class='sort-by res-sort clearfix dash_sort _visu']/li[2]");
-
-		By report_BudgetHeadReport=By.xpath("//*[@class='k-list-scroller']/ul[1]/li[3]/span[1]/h2[1]");
-
-		By report_RecognitionsReport=By.xpath("//*[@class='k-list-scroller']/ul[1]/li[12]/span[1]/h2[1]");
-
-		By report_RedemptionReport=By.xpath("//*[@class='k-list-scroller']/ul[1]/li[14]/span[1]/h2[1]");
-
-		By report_UserLoginReport=By.xpath("//*[@class='k-list-scroller']/ul[1]/li[20]/span[1]/h2[1]");
-
-
-
-
-
-		public void clickDashboard() {	
-			driver.findElement(link_dashboard).click();
-		}
-
-		public void clickVisualization() {	
-			driver.findElement(tab_DataVisualization).click();
-		}
-
-
-		public void clickReports() {	
-			driver.findElement(tab_reports).click();		
-		}
-
-		public void clickSelectReportDropdown() {	
-			driver.findElement(dropdown_selectReports).click();		
-		}
-
-		public void clickBudgetHeadReport() {	
-			driver.findElement(report_BudgetHeadReport).click();		
-		}
-
-		public void clickRecognitionsReport() {	
-			driver.findElement(report_RecognitionsReport).click();		
-		}
-
-		public void clickRedemptionReport() {	
-			driver.findElement(report_RedemptionReport).click();		
-		}
-
-		public void clickUserLoginReport() {	
-			driver.findElement(report_UserLoginReport).click();		
-		}
-
-
+		PageFactory.initElements(driver,this);
 
 	}
+
+
+
+
+
+
+	//============== Login ============//
+
+	public void entrUsernam() {
+		txt_usrname.sendKeys("satish.jaiswal@beyond360.com");
+	}
+
+	public void entrPassword() {
+
+		txt_password.sendKeys("pass@12345");
+	}
+
+	public void clikButon() {
+		btn_login.click();
+	}
+
+
+
+	//============== Log Out ============//
+
+	public void clickUserprofile() {	
+		image_userProfile.click();		
+	}
+
+	public void clicklogOut() {	
+		btn_logOut.click();		
+	}	
+
+	public void clickOkBtn() {	
+		btn_OK.click();		
+	}
+
+
+
+	//============== All Pages ============//
+
+	public void clickRecognize() {	
+		link_recognize.click();
+	}
+
+	public void clickSkillInsight() {	
+		link_skillInsight.click();
+	}
+
+	public void clickWellness() {	
+		link_wellness.click();
+	}
+
+	public void clickSurvey() {	
+		link_survey.click();
+	}
+
+	public void clickJob() {	
+		link_jobReferral.click();
+	}
+
+	public void clickMySummary() {	
+		link_mySummary.click();
+	}
+
+	public void clickRedeem() {	
+		link_redeem.click();
+	}
+
+
+
+
+	//============== Reports ============//
+
+	public void clickDashboard() {	
+		link_dashboard.click();
+	}
+
+
+
+	public void clickReports() {	
+		tab_reports.click();		
+	}
+
+	public void clickSelectReportDropdown() {	
+		dropdown_selectReports.click();		
+	}
+
+	public void clickBudgetHeadReport() {	
+		report_BudgetHeadReport.click();		
+	}
+
+	public void clickRecognitionsReport() {	
+		report_RecognitionsReport.click();		
+	}
+
+	public void clickRedemptionReport() {	
+		report_RedemptionReport.click();		
+	}
+
+	public void clickUserLoginReport() {	
+		report_UserLoginReport.click();		
+	}
+
+
+
+	public void clickVisualization() {	
+		tab_DataVisualization.click();
+	}
+
+
+
+}
 
 
