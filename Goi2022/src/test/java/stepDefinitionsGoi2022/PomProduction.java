@@ -25,18 +25,15 @@ import util.TakeSS;
 public class PomProduction {
 
 
-	private static final Logger logger= LogManager.getLogger("PomProduction");
 	static WebDriver driver =null;
 
 
 	PageElements pages;
-
 	TakeSS screenshots;
 
 
 
-
-
+	private static final Logger logger = LogManager.getLogger(PomProduction.class);
 
 	@BeforeStep
 	public void beforeStepHook() throws IOException, InterruptedException {
@@ -53,19 +50,27 @@ public class PomProduction {
 
 
 
-
 	@Given ("^User is on Login page wrt Ind_Production$")
 	public void loginPage() throws IOException, InterruptedException {
+
+
+
+
 
 		WebDriverManager.firefoxdriver().setup();
 
 		driver= new FirefoxDriver();
 
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+
+
+
 		driver.navigate().to("https://goinfinity.beyond360tech.com/");
 
+
+		
 		logger.info("Browser Started on Goi- India Production environment");
 		logger.info("This is login page");
 	}
@@ -79,10 +84,10 @@ public class PomProduction {
 		pages.entrUsernam();
 		pages.entrPassword();
 		//pages.clikButon();	
-		
+
 		Thread.sleep(5000);
 		logger.info("This is Homepage page");
-		
+
 	}
 
 
@@ -248,9 +253,9 @@ public class PomProduction {
 
 		System.out.println("this is login page");
 		Thread.sleep(1000);
-		
+
 		driver.close();
-		
+
 		logger.info("Browser Closed");
 
 
