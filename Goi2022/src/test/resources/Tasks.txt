@@ -1,0 +1,6 @@
+Staging + Production
+Logger
+screenshot
+switch to new tab
+open link in a new tab
+scroll added in RecognizeNow, My Summ & Dashboard

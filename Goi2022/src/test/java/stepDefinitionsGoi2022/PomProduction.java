@@ -227,10 +227,47 @@ public class PomProduction {
 
 	}
 
+	//=========	 Admin Console Page  ========
+
+	@When ("^Clicks on Admin Console link wrt Ind_Production$")
+	public void adminConsole() throws InterruptedException, IOException {
+		System.out.println("test");
+		
+		/*
+		pages.clickUserprofile();
+		Thread.sleep(2000);
+
+		pages.clickAdminConsole();
+		Thread.sleep(1000);
+
+
+
+
+		String currentTab = driver.getWindowHandle();
+
+		ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
+		newTab.remove(currentTab);
+
+		// change focus to new tab
+		driver.switchTo().window(newTab.get(0));
+		Thread.sleep(8000);
+
+		screenshots.takeScreenshot();
+		
+		logger.info("This is Admin Console page");
+		driver.close();
+
+		driver.switchTo().window(currentTab);
+		Thread.sleep(500);
+
+		pages.clickUserprofile();
+		*/
+	}
+
 
 	//=========	 Logout cum Login Page  ========
 
-	@When ("^Clicks on LogOut link wrt Ind_Production$")
+	@And ("^Clicks on LogOut link wrt Ind_Production$")
 	public void LogoutLink() throws InterruptedException {
 
 		pages.clickUserprofile();

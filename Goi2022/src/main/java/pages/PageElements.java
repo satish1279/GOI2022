@@ -1,9 +1,4 @@
 package pages;
-
-
-
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,10 +13,10 @@ public class PageElements {
 
 	//============== Login ============//
 
-	@FindBy(xpath="//input[@name='username']")
+	@FindBy(css="input[name='username']")
 	WebElement txt_usrname;
 
-	@FindBy(xpath="//input[@name='password']")
+	@FindBy(css="input[name='password']")
 	WebElement txt_password;
 
 	@FindBy(css="#cred_sign_in_button")
@@ -33,7 +28,7 @@ public class PageElements {
 
 	@FindBy(xpath="//a[@class='user-profile dropdown-toggle ng-isolate-scope']//img[@class='ng-scope']")
 	WebElement image_userProfile;
-
+	
 	@FindBy(css="a[title='Logout']")
 	WebElement btn_logOut;
 
@@ -42,36 +37,49 @@ public class PageElements {
 
 
 
+	//============== Admin Console Link ============//
+
+	@FindBy(css="a[class='ng-binding ng-scope ng-isolate-scope']")
+	WebElement link_adminConsole;
+
+
+
 
 	//============== All Pages ============//
 
-	@FindBy(xpath="//a[@class='cursorPointer'and @href='Recognize/Recognize']//span[@class='ng-binding'][contains(text(),'Recognize')]")
+	@FindBy(css="a[class='cursorPointer'][href='Recognize/Recognize']")
 	WebElement link_recognize;
-
-	@FindBy(xpath="//a[@class='cursorPointer'][@href='Feedback/Index']//span[@class='ng-binding'][contains(text(),'Skill Insight')]")
+	
+	@FindBy(css="a[class='cursorPointer'][href='Feedback/Index']")
 	WebElement link_skillInsight;
 
-	@FindBy(xpath="//a[@class='cursorPointer'][@href='Wellness/index']//span[@class='ng-binding'][contains(text(),'Wellness')]")
+	@FindBy(css="a[class='cursorPointer'][href='Wellness/index']")
 	WebElement link_wellness;
 
-	@FindBy(xpath="//a[@class='cursorPointer'][@href='Survey/Index']//span[@class='ng-binding'][contains(text(),'Survey')]")
+	@FindBy(css="a[class='cursorPointer'][href='Survey/Index']")
 	WebElement link_survey;
 
-	@FindBy(xpath="//a[@class='cursorPointer'][@href='managejob/index']//span[@class='ng-binding'][contains(text(),'Job Referral')]")
+	@FindBy(css="a[class='cursorPointer'][href='managejob/index']")
 	WebElement link_jobReferral;
 
-	@FindBy(xpath="//a[@class='cursorPointer'][@href='Home/viewProfile']//span[@class='ng-binding'][contains(text(),'My Summary')]")
+	@FindBy(css="a[class='cursorPointer'][href='Home/viewProfile']")
 	WebElement link_mySummary;
 
-	@FindBy(xpath="//a[@class='cursorPointer'][@href='Redeem/RedeemPlus']//span[@class='ng-binding'][contains(text(),'Redeem')]")
+	
+	
+	
+	@FindBy(css="a[class='cursorPointer'][href='Redeem/RedeemPlus']")
 	WebElement link_redeem;
 
-	
-	
+	@FindBy(css="a[class='btn_link btn_link_primary']")
+	WebElement OrderHistoryLink;
+
+
+
 
 
 	//============== Reports ============//
-	
+
 	@FindBy(xpath="//a[@class='cursorPointer'][@href='Dashboard/Dashboard']//span[@class='ng-binding'][contains(text(),'Dashboard')]")
 	WebElement link_dashboard; 
 
@@ -98,8 +106,6 @@ public class PageElements {
 
 	@FindBy(xpath="//ul[@class='horizontal_block_tab_menu clearfix']/li[2]/a[1]")
 	WebElement tab_DataVisualization;
-
-
 
 
 	//============== Constructor ============//
@@ -172,12 +178,26 @@ public class PageElements {
 		link_jobReferral.click();
 	}
 
+
+
 	public void clickMySummary() {	
 		link_mySummary.click();
 	}
 
+	/*
+	public void clickOrderHistoryLink() {	
+		String openInNewtab = Keys.chord(Keys.CONTROL,Keys.ENTER);
+		OrderHistoryLink.sendKeys(openInNewtab);
+		}
+	 */
+
 	public void clickRedeem() {	
 		link_redeem.click();
+	}
+
+
+	public void clickAdminConsole() {	
+		link_adminConsole.click();
 	}
 
 
