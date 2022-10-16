@@ -14,9 +14,9 @@ import io.cucumber.junit.CucumberOptions;
 		glue= {"stepDefinitionsGoi2022"},
 		tags= "@Staging",
 		plugin= {"pretty"}
-	//	dryRun = true
-		
-		
+		//	dryRun = true
+
+
 		)
 
 //features= {"src/test/resources/FeatureFilesGoi2022"}, , @Production

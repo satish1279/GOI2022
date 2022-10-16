@@ -1,5 +1,7 @@
 package stepDefinitionsGoi2022;
 
+
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -18,55 +20,61 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.PageElements;
 import util.TakeSS;
 
-public class PomStaging {
+
+
+public class PomINDproduction {
 
 
 	static WebDriver driver =null;
 
+
 	PageElements pages;
 	TakeSS screenshots;
 
-	private static final Logger logger = LogManager.getLogger(PomStaging.class);
 
 
+	private static final Logger logger = LogManager.getLogger(PomINDproduction.class);
 
 	@BeforeStep
 	public void beforeStepHook() throws IOException, InterruptedException {
 		Thread.sleep(500);
 	}
 
+
 	@AfterStep
 	public void afterStepHook() throws IOException, InterruptedException {
 
 		screenshots = new TakeSS(driver);
-	//	screenshots.takeScreenshot();
+		//screenshots.takeScreenshot();
 		Thread.sleep(500);
 	}
 
 
 
-
-	@Given ("^User is on Login page wrt Staging$")
+	@Given ("^User is on Login page wrt Ind_Production$")
 	public void loginPage() throws IOException, InterruptedException {
 
-		//				WebDriverManager.firefoxdriver().setup();
-		//				driver= new FirefoxDriver();
+
+		//		WebDriverManager.firefoxdriver().setup();
+		//		driver= new FirefoxDriver();
 
 
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
 
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-		driver.navigate().to("https://goinfinity.beyond360test.com/");
+		driver.navigate().to("https://goinfinity.beyond360tech.com/");
 
-		logger.info("   Browser   Started   on   Goi  - Staging   environment");
+
+		logger.info("Browser Started on Goi- India Production environment");
 		logger.info("This is login page");
 	}
 
 
-	@When ("^User is logged in after entering the correct credentials wrt Staging$")
+	@When ("^User is logged in after entering the correct credentials wrt Ind_Production$")
 	public void enterUsername() throws InterruptedException {
 
 		pages =  new PageElements(driver);
@@ -75,15 +83,15 @@ public class PomStaging {
 		pages.entrPassword();
 		//pages.clikButon();	
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		logger.info("This is Homepage page");
 
 	}
 
 
 	//	=========	Recognize Page  ========
-	@And ("^Clicks on Recognize link wrt Staging$")
-	public void recogLink() throws InterruptedException, IOException {
+	@And ("^Clicks on Recognize link wrt Ind_Production$")
+	public void recogLink() throws InterruptedException {
 
 		System.out.println("test");
 		/*
@@ -101,37 +109,37 @@ public class PomStaging {
 
 
 	//	=========	Skill Insight Page  ========
-	@When ("^Clicks on Skill Insight link wrt Staging$")
+	@When ("^Clicks on Skill Insight link wrt Ind_Production$")
 	public void skillinsightLink() throws InterruptedException {
 		System.out.println("test");
 		//pages.clickSkillInsight();
-		//logger.info("This is Feedback page");
+		logger.info("This is Feedback page");
 	}
 
 
 	//	=========	 Wellness  Page  ========
-	@And ("^Clicks on Wellness link wrt Staging$")
+	@And ("^Clicks on Wellness link wrt Ind_Production$")
 	public void WellnessLink() throws InterruptedException {
 		System.out.println("test");
-		//	pages.clickWellness();
-		//logger.info("This is Wellness page");
+		//pages.clickWellness();
+		logger.info("This is Wellness page");
 	}
 
 
 
 	//=========	 Survey  Page  ========
-	@When ("^Clicks on Survey link wrt Staging$")
+	@When ("^Clicks on Survey link wrt Ind_Production$")
 	public void SurveyLink() throws InterruptedException {
 		//System.out.println("test");
-		//pages.clickSurvey();
+		pages.clickSurvey();
 		logger.info("This is Survey page");
 	}
 
 
 
 	//	=========	 My Summary  Page  ========
-	@And ("^Clicks on My Summary link wrt Staging$")
-	public void MySummaryLink() throws InterruptedException, IOException {
+	@And ("^Clicks on My Summary link wrt Ind_Production$")
+	public void MySummaryLink() throws InterruptedException {
 		System.out.println("test");
 		/*
 		pages.clickMySummary();
@@ -143,21 +151,20 @@ public class PomStaging {
 		js.executeScript("window.scrollBy(0,790)");
 
 		 */
-
 	}
 
 	//	=========	 Redeem Page  ========
-	@When ("^Clicks on Redeem link wrt Staging$")
+	@When ("^Clicks on Redeem link wrt Ind_Production$")
 	public void RedeemLink() throws InterruptedException {
 		System.out.println("test");
-		//pages.clickRedeem();
-		//logger.info("This is Redeem page");
+		//	pages.clickRedeem();
+		logger.info("This is Redeem page");
 	}
 
 
 	//	=========	 Dashboard & Reports Page  ========
-	@And ("^Clicks on Dashboard link wrt Staging$")
-	public void DashboardLink() throws InterruptedException, IOException {
+	@And ("^Clicks on Dashboard link wrt Ind_Production$")
+	public void DashboardLink() throws InterruptedException {
 		System.out.println("test");
 
 		/*
@@ -188,65 +195,66 @@ public class PomStaging {
 	}
 
 
-	@When ("^Clicks on Reports tab wrt Staging$")
+	@When ("^Clicks on Reports tab wrt Ind_Production$")
 	public void ReportTab() throws InterruptedException {
 		System.out.println("test");
-		//pages.clickReports();
+
+		//		pages.clickReports();
 		//		logger.info("This is Reports page");
 
 	}
 
-	@And ("^Clicks on Budget Head Report option from Select Report dropdown wrt Staging$")
+	@And ("^Clicks on Budget Head Report option from Select Report dropdown wrt Ind_Production$")
 	public void clickBudgetHeadReport() throws InterruptedException {
 		System.out.println("test");
-		/*
-		pages.clickSelectReportDropdown();
-		Thread.sleep(1000);
-		pages.clickBudgetHeadReport();
-		Thread.sleep(1000);
+
+		//		pages.clickSelectReportDropdown();
+		//		Thread.sleep(1000);
+		//		pages.clickBudgetHeadReport();
+		//		Thread.sleep(1000);
 		logger.info("This is Budget Head Report page");
-		 */
+
 	}
 
 
-	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt Staging$")
+	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt Ind_Production$")
 	public void clickRecognitionsReport() throws InterruptedException {
 		System.out.println("test");
-		/*
-		pages.clickSelectReportDropdown();
-		Thread.sleep(1000);
-		pages.clickRecognitionsReport();
-		Thread.sleep(5000);
+		//		pages.clickSelectReportDropdown();
+		//		Thread.sleep(1000);
+		//		pages.clickRecognitionsReport();
+		//		Thread.sleep(5000);
 		logger.info("This is Recognitions Report page");
-		 */
+
 	}
 
-	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt Staging$")
+	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt Ind_Production$")
 	public void clickRedemptionReport() throws InterruptedException {
 		System.out.println("test");
 
-		pages.clickSelectReportDropdown();
-		Thread.sleep(1000);
-		pages.clickRedemptionReport();
-		Thread.sleep(3000);
+		//		pages.clickSelectReportDropdown();
+		//		Thread.sleep(1000);
+		//		pages.clickRedemptionReport();
+		//		Thread.sleep(3000);
 		logger.info("This is Redemption Report page");
+
 	}
 
-	@When ("^Clicks on User Login Report option from Select Report dropdown wrt Staging$")
+	@When ("^Clicks on User Login Report option from Select Report dropdown wrt Ind_Production$")
 	public void clickUserLoginReport() throws InterruptedException {
 
 		System.out.println("test");
-		/*
-		pages.clickSelectReportDropdown();
-		Thread.sleep(1000);
-		pages.clickUserLoginReport();
 
+		//		pages.clickSelectReportDropdown();
+		//		Thread.sleep(1000);
+		//		pages.clickUserLoginReport();
+		//
 		logger.info("This is User Login Report page");
-		 */
+
 	}
 
 
-	@And ("^Clicks on Data Visualization tab wrt Staging$")
+	@And ("^Clicks on Data Visualization tab wrt Ind_Production$")
 	public void dataVisualizationTab() throws InterruptedException {
 
 		System.out.println("test");
@@ -256,10 +264,9 @@ public class PomStaging {
 
 	}
 
-
 	//=========	 Admin Console Page  ========
 
-	@When ("^Clicks on Admin Console link wrt Staging$")
+	@When ("^Clicks on Admin Console link wrt Ind_Production$")
 	public void adminConsole() throws InterruptedException, IOException {
 		System.out.println("test");
 
@@ -268,37 +275,37 @@ public class PomStaging {
 		Thread.sleep(2000);
 
 		pages.clickAdminConsole();
-		Thread.sleep(8000);
-		 */
+		Thread.sleep(1000);
 
 
-		// ==============  switch to next tab ===========================
+// ==============  switch to next tab ===========================
 
-		/*
 		String currentTab = driver.getWindowHandle();
 
 		ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
 		newTab.remove(currentTab);
 
+		// change focus to new tab
 		driver.switchTo().window(newTab.get(0));
 		Thread.sleep(8000);
 
 		screenshots.takeScreenshot();
-		logger.info("This is Admin Console page");
 
+		logger.info("This is Admin Console page");
 		driver.close();
 
 		driver.switchTo().window(currentTab);
 		Thread.sleep(500);
 
 		pages.clickUserprofile();
-		 */ 
+
+		 */
 	}
 
 
 	//=========	 Logout cum Login Page  ========
 
-	@And ("^Clicks on LogOut link wrt Staging$")
+	@And ("^Clicks on LogOut link wrt Ind_Production$")
 	public void LogoutLink() throws InterruptedException {
 
 		pages.clickUserprofile();
@@ -314,13 +321,14 @@ public class PomStaging {
 	}
 
 
-	@Then ("^User is navigated to first page wrt Staging$")
+	@Then ("^User is navigated to first page wrt Ind_Production$")
 	public void RedeemPG()  throws InterruptedException {
 
 		System.out.println("this is login page");
 		Thread.sleep(1000);
 
 		driver.close();
+
 		logger.info("Browser Closed");
 	}
 

@@ -18,7 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.PageElements;
 import util.TakeSS;
 
-public class PomStaging {
+public class PomBeyondUSdemo {
 
 
 	static WebDriver driver =null;
@@ -26,7 +26,7 @@ public class PomStaging {
 	PageElements pages;
 	TakeSS screenshots;
 
-	private static final Logger logger = LogManager.getLogger(PomStaging.class);
+	private static final Logger logger = LogManager.getLogger(PomBeyondUSdemo.class);
 
 
 
@@ -46,7 +46,7 @@ public class PomStaging {
 
 
 
-	@Given ("^User is on Login page wrt Staging$")
+	@Given ("^User is on Login page wrt USdemo$")
 	public void loginPage() throws IOException, InterruptedException {
 
 		//				WebDriverManager.firefoxdriver().setup();
@@ -59,14 +59,14 @@ public class PomStaging {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-		driver.navigate().to("https://goinfinity.beyond360test.com/");
+		driver.navigate().to("https://beyondus-demo.beyond360apps.com/");
 
-		logger.info("   Browser   Started   on   Goi  - Staging   environment");
+		logger.info("Browser   Started  on  Beyond- USdemo   environment");
 		logger.info("This is login page");
 	}
 
 
-	@When ("^User is logged in after entering the correct credentials wrt Staging$")
+	@When ("^User is logged in after entering the correct credentials wrt USdemo$")
 	public void enterUsername() throws InterruptedException {
 
 		pages =  new PageElements(driver);
@@ -82,7 +82,7 @@ public class PomStaging {
 
 
 	//	=========	Recognize Page  ========
-	@And ("^Clicks on Recognize link wrt Staging$")
+	@And ("^Clicks on Recognize link wrt USdemo$")
 	public void recogLink() throws InterruptedException, IOException {
 
 		System.out.println("test");
@@ -101,7 +101,7 @@ public class PomStaging {
 
 
 	//	=========	Skill Insight Page  ========
-	@When ("^Clicks on Skill Insight link wrt Staging$")
+	@When ("^Clicks on Skill Insight link wrt USdemo$")
 	public void skillinsightLink() throws InterruptedException {
 		System.out.println("test");
 		//pages.clickSkillInsight();
@@ -110,7 +110,7 @@ public class PomStaging {
 
 
 	//	=========	 Wellness  Page  ========
-	@And ("^Clicks on Wellness link wrt Staging$")
+	@And ("^Clicks on Wellness link wrt USdemo$")
 	public void WellnessLink() throws InterruptedException {
 		System.out.println("test");
 		//	pages.clickWellness();
@@ -120,7 +120,7 @@ public class PomStaging {
 
 
 	//=========	 Survey  Page  ========
-	@When ("^Clicks on Survey link wrt Staging$")
+	@When ("^Clicks on Survey link wrt USdemo$")
 	public void SurveyLink() throws InterruptedException {
 		//System.out.println("test");
 		//pages.clickSurvey();
@@ -130,7 +130,7 @@ public class PomStaging {
 
 
 	//	=========	 My Summary  Page  ========
-	@And ("^Clicks on My Summary link wrt Staging$")
+	@And ("^Clicks on My Summary link wrt USdemo$")
 	public void MySummaryLink() throws InterruptedException, IOException {
 		System.out.println("test");
 		/*
@@ -147,7 +147,7 @@ public class PomStaging {
 	}
 
 	//	=========	 Redeem Page  ========
-	@When ("^Clicks on Redeem link wrt Staging$")
+	@When ("^Clicks on Redeem link wrt USdemo$")
 	public void RedeemLink() throws InterruptedException {
 		System.out.println("test");
 		//pages.clickRedeem();
@@ -156,7 +156,7 @@ public class PomStaging {
 
 
 	//	=========	 Dashboard & Reports Page  ========
-	@And ("^Clicks on Dashboard link wrt Staging$")
+	@And ("^Clicks on Dashboard link wrt USdemo$")
 	public void DashboardLink() throws InterruptedException, IOException {
 		System.out.println("test");
 
@@ -188,7 +188,7 @@ public class PomStaging {
 	}
 
 
-	@When ("^Clicks on Reports tab wrt Staging$")
+	@When ("^Clicks on Reports tab wrt USdemo$")
 	public void ReportTab() throws InterruptedException {
 		System.out.println("test");
 		//pages.clickReports();
@@ -196,7 +196,7 @@ public class PomStaging {
 
 	}
 
-	@And ("^Clicks on Budget Head Report option from Select Report dropdown wrt Staging$")
+	@And ("^Clicks on Budget Head Report option from Select Report dropdown wrt USdemo$")
 	public void clickBudgetHeadReport() throws InterruptedException {
 		System.out.println("test");
 		/*
@@ -209,7 +209,7 @@ public class PomStaging {
 	}
 
 
-	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt Staging$")
+	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt USdemo$")
 	public void clickRecognitionsReport() throws InterruptedException {
 		System.out.println("test");
 		/*
@@ -221,7 +221,7 @@ public class PomStaging {
 		 */
 	}
 
-	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt Staging$")
+	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt USdemo$")
 	public void clickRedemptionReport() throws InterruptedException {
 		System.out.println("test");
 
@@ -232,7 +232,7 @@ public class PomStaging {
 		logger.info("This is Redemption Report page");
 	}
 
-	@When ("^Clicks on User Login Report option from Select Report dropdown wrt Staging$")
+	@When ("^Clicks on User Login Report option from Select Report dropdown wrt USdemo$")
 	public void clickUserLoginReport() throws InterruptedException {
 
 		System.out.println("test");
@@ -246,7 +246,7 @@ public class PomStaging {
 	}
 
 
-	@And ("^Clicks on Data Visualization tab wrt Staging$")
+	@And ("^Clicks on Data Visualization tab wrt USdemo$")
 	public void dataVisualizationTab() throws InterruptedException {
 
 		System.out.println("test");
@@ -259,7 +259,7 @@ public class PomStaging {
 
 	//=========	 Admin Console Page  ========
 
-	@When ("^Clicks on Admin Console link wrt Staging$")
+	@When ("^Clicks on Admin Console link wrt USdemo$")
 	public void adminConsole() throws InterruptedException, IOException {
 		System.out.println("test");
 
@@ -298,7 +298,7 @@ public class PomStaging {
 
 	//=========	 Logout cum Login Page  ========
 
-	@And ("^Clicks on LogOut link wrt Staging$")
+	@And ("^Clicks on LogOut link wrt USdemo$")
 	public void LogoutLink() throws InterruptedException {
 
 		pages.clickUserprofile();
@@ -314,7 +314,7 @@ public class PomStaging {
 	}
 
 
-	@Then ("^User is navigated to first page wrt Staging$")
+	@Then ("^User is navigated to first page wrt USdemo$")
 	public void RedeemPG()  throws InterruptedException {
 
 		System.out.println("this is login page");
