@@ -321,8 +321,8 @@ public class PomINDproduction {
 	}
 
 
-	@Then ("^User is navigated to first page wrt Ind_Production$")
-	public void RedeemPG()  throws InterruptedException {
+	@Then ("^User is navigated to login page wrt Ind_Production$")
+	public void IndProdLoginPg()  throws InterruptedException {
 
 		System.out.println("this is login page");
 		Thread.sleep(1000);

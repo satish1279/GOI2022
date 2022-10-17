@@ -314,8 +314,8 @@ public class PomBeyondUSdemo {
 	}
 
 
-	@Then ("^User is navigated to first page wrt USdemo$")
-	public void RedeemPG()  throws InterruptedException {
+	@Then ("^User is navigated to login page wrt USdemo$")
+	public void USdemoLoginPg()  throws InterruptedException {
 
 		System.out.println("this is login page");
 		Thread.sleep(1000);
