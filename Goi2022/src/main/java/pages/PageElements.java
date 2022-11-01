@@ -46,6 +46,9 @@ public class PageElements {
 
 
 	//============== All Pages ============//
+	
+	@FindBy(css="a[class='cursorPointer'][href='Home/Index']")
+	WebElement link_Homepage;
 
 	@FindBy(css="a[class='cursorPointer'][href='Recognize/Recognize']")
 	WebElement link_recognize;
@@ -103,9 +106,13 @@ public class PageElements {
 	@FindBy(xpath="//*[@class='k-list-scroller']/ul[1]/li[20]/span[1]/h2[1]")
 	WebElement report_UserLoginReport;
 
+	@FindBy(xpath="//*[@class='k-list-scroller']/ul[1]/li[15]/span[1]/h2[1]")
+	WebElement USdemoreport_UserLoginReport;
+
 
 	@FindBy(xpath="//ul[@class='horizontal_block_tab_menu clearfix']/li[2]/a[1]")
 	WebElement tab_DataVisualization;
+
 
 
 	//============== Constructor ============//
@@ -120,6 +127,7 @@ public class PageElements {
 
 
 
+	
 
 
 
@@ -130,11 +138,10 @@ public class PageElements {
 	}
 
 	public void entrPassword() {
-
 		txt_password.sendKeys("pass@12345");
 	}
 
-	public void clikButon() {
+	public void clickButton() {
 		btn_login.click();
 	}
 
@@ -157,6 +164,11 @@ public class PageElements {
 
 
 	//============== All Pages ============//
+	
+	public void clickHome() {
+		link_Homepage.click();
+	}
+
 
 	public void clickRecognize() {	
 		link_recognize.click();
@@ -235,6 +247,9 @@ public class PageElements {
 		report_UserLoginReport.click();		
 	}
 
+	public void clickUsdemoUserLoginReport() {	
+		USdemoreport_UserLoginReport.click();		
+	}
 
 
 	public void clickVisualization() {	
