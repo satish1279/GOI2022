@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -70,15 +69,11 @@ public class PomBeyondUSdemo {
 	@And ("^Clicks on Recognize link wrt USdemo$")
 	public void recogLink() throws InterruptedException, IOException {
 
-		System.out.println("test");
+		
 
 		pages.clickRecognize();
-		//screenshots.takeScreenshot();
+		
 		logger.info("This is Recognize page");
-
-		Thread.sleep(2000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,550)");
 
 	}
 
@@ -87,7 +82,7 @@ public class PomBeyondUSdemo {
 	//=========	 Wellness  Page  ========
 	@And ("^Clicks on Wellness link wrt USdemo$")
 	public void WellnessLink() throws InterruptedException {
-		System.out.println("test");
+		
 		pages.clickWellness();
 		logger.info("This is Wellness page");
 	}
@@ -97,7 +92,7 @@ public class PomBeyondUSdemo {
 	//=========	 Survey  Page  ========
 	@When ("^Clicks on Survey link wrt USdemo$")
 	public void SurveyLink() throws InterruptedException {
-		System.out.println("test");
+		
 		pages.clickSurvey();
 		logger.info("This is Survey page");
 	}
@@ -107,15 +102,11 @@ public class PomBeyondUSdemo {
 	//=========	 My Summary  Page  ========
 	@And ("^Clicks on My Summary link wrt USdemo$")
 	public void MySummaryLink() throws InterruptedException, IOException {
-		System.out.println("test");
+		
 
 		pages.clickMySummary();
-		//screenshots.takeScreenshot();
+		
 		logger.info("This is My Summary page");
-
-		Thread.sleep(3000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,790)");
 
 	}
 
@@ -123,7 +114,7 @@ public class PomBeyondUSdemo {
 	//=========	 Redeem Page  ========
 	@When ("^Clicks on Redeem link wrt USdemo$")
 	public void RedeemLink() throws InterruptedException {
-		System.out.println("test");
+		
 		pages.clickRedeem();
 		Thread.sleep(3000);
 		logger.info("This is Redeem page");
@@ -133,33 +124,14 @@ public class PomBeyondUSdemo {
 	//=========	 Dashboard & Reports Page  ========
 	@And ("^Clicks on Dashboard link wrt USdemo$")
 	public void DashboardLink() throws InterruptedException, IOException {
-		System.out.println("test");
+		
 
 
 		pages.clickDashboard();	
 		Thread.sleep(2000);
 
-		//screenshots.takeScreenshot();
+		
 		logger.info("This is Dashboard page");
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		js.executeScript("window.scrollBy(0,740)");
-		//screenshots.takeScreenshot();
-		Thread.sleep(1000);
-
-
-		js.executeScript("window.scrollBy(0,630)");
-		//screenshots.takeScreenshot();
-		Thread.sleep(1000);
-
-
-		js.executeScript("window.scrollBy(0,550)");
-		//screenshots.takeScreenshot();
-		Thread.sleep(1000);
-
-		js.executeScript("window.scrollBy(0,500)");
-
 	}
 
 
@@ -167,7 +139,7 @@ public class PomBeyondUSdemo {
 	public void ReportTab() throws InterruptedException {
 		pages.clickHome();
 		Thread.sleep(2000);
-		System.out.println("test");
+		
 
 		pages.clickDashboard();
 		Thread.sleep(3000);
@@ -177,7 +149,7 @@ public class PomBeyondUSdemo {
 
 	@And ("^Clicks on Budget Head Report option from Select Report dropdown wrt USdemo$")
 	public void clickBudgetHeadReport() throws InterruptedException {
-		System.out.println("test");
+		
 
 		pages.clickSelectReportDropdown();
 		Thread.sleep(1000);
@@ -190,7 +162,7 @@ public class PomBeyondUSdemo {
 
 	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt USdemo$")
 	public void clickRecognitionsReport() throws InterruptedException {
-		System.out.println("test");
+		
 
 		pages.clickSelectReportDropdown();
 		Thread.sleep(1000);
@@ -202,7 +174,7 @@ public class PomBeyondUSdemo {
 
 	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt USdemo$")
 	public void clickRedemptionReport() throws InterruptedException {
-		System.out.println("test");
+		
 
 		pages.clickSelectReportDropdown();
 		Thread.sleep(1000);
@@ -214,7 +186,7 @@ public class PomBeyondUSdemo {
 	@When ("^Clicks on User Login Report option from Select Report dropdown wrt USdemo$")
 	public void clickUserLoginReport() throws InterruptedException {
 
-		System.out.println("test");
+		
 
 		pages.clickSelectReportDropdown();
 		Thread.sleep(1000);
@@ -228,7 +200,7 @@ public class PomBeyondUSdemo {
 	@And ("^Clicks on Data Visualization tab wrt USdemo$")
 	public void dataVisualizationTab() throws InterruptedException {
 
-		System.out.println("test");
+		
 
 		pages.clickVisualization();
 		logger.info("This is Data Visualization page");
@@ -240,7 +212,7 @@ public class PomBeyondUSdemo {
 
 	@When ("^Clicks on Admin Console link wrt USdemo$")
 	public void adminConsole() throws InterruptedException, IOException {
-		System.out.println("test");
+		
 
 
 		pages.clickUserprofile();
@@ -260,9 +232,9 @@ public class PomBeyondUSdemo {
 		newTab.remove(currentTab);
 
 		driver.switchTo().window(newTab.get(0));
-		Thread.sleep(8000);
+		Thread.sleep(20000);
 
-		//screenshots.takeScreenshot();
+		
 		logger.info("This is Admin Console page");
 
 		driver.close();

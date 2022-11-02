@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -36,8 +35,8 @@ public class PomUSproduction {
 	public void loginPage() throws IOException, InterruptedException {
 
 
-				//WebDriverManager.firefoxdriver().setup();
-				//driver= new FirefoxDriver();
+		//WebDriverManager.firefoxdriver().setup();
+		//driver= new FirefoxDriver();
 
 
 		WebDriverManager.chromedriver().setup();
@@ -70,38 +69,31 @@ public class PomUSproduction {
 	}
 
 
-		// =========	Recognize Page  ========
+	// =========	Recognize Page  ========
 	@And ("^Clicks on Recognize link wrt US_Production$")
 	public void recogLink() throws InterruptedException, IOException {
 
-		System.out.println("test");
-		
 		pages.clickRecognize();
-		//screenshots.takeScreenshot();
+
 		logger.info("This is Recognize page");
 
-		Thread.sleep(2000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,550)");
-
-		 
-
+		Thread.sleep(2000); 
 	}
 
 
-		// =========	Skill Insight Page  ========
+	// =========	Skill Insight Page  ========
 	@When ("^Clicks on Skill Insight link wrt US_Production$")
 	public void skillinsightLink() throws InterruptedException {
-		System.out.println("test");
+
 		pages.clickSkillInsight();
 		logger.info("This is Feedback page");
 	}
 
 
-		// =========	 Wellness  Page  ========
+	// =========	 Wellness  Page  ========
 	@And ("^Clicks on Wellness link wrt US_Production$")
 	public void WellnessLink() throws InterruptedException {
-		System.out.println("test");
+
 		pages.clickWellness();
 		logger.info("This is Wellness page");
 	}
@@ -111,69 +103,46 @@ public class PomUSproduction {
 	// =========	 Survey  Page  ========
 	@When ("^Clicks on Survey link wrt US_Production$")
 	public void SurveyLink() throws InterruptedException {
-		System.out.println("test");
+
 		pages.clickSurvey();
 		logger.info("This is Survey page");
 	}
 
 
 
-		// =========	 My Summary  Page  ========
+	// =========	 My Summary  Page  ========
 	@And ("^Clicks on My Summary link wrt US_Production$")
 	public void MySummaryLink() throws InterruptedException, IOException {
-		System.out.println("test");
-		
+
+
 		pages.clickMySummary();
-		//screenshots.takeScreenshot();
+
 		logger.info("This is My Summary page");
 
-		Thread.sleep(3000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,790)");
-
-		 
 	}
 
-		// =========	 Redeem Page  ========
+	// =========	 Redeem Page  ========
 	@When ("^Clicks on Redeem link wrt US_Production$")
 	public void RedeemLink() throws InterruptedException {
-		System.out.println("test");
-			pages.clickRedeem();
-			Thread.sleep(3000);
-			logger.info("This is Redeem page");
+
+		pages.clickRedeem();
+		Thread.sleep(3000);
+		logger.info("This is Redeem page");
 	}
 
 
-		// =========	 Dashboard & Reports Page  ========
+	// =========	 Dashboard & Reports Page  ========
 	@And ("^Clicks on Dashboard link wrt US_Production$")
 	public void DashboardLink() throws InterruptedException, IOException {
-		System.out.println("test");
 
-		
+
+
 		pages.clickDashboard();	
 		Thread.sleep(2000);
 
-		//screenshots.takeScreenshot();
-				logger.info("This is Dashboard page");
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		logger.info("This is Dashboard page");
 
-		js.executeScript("window.scrollBy(0,740)");
-		//screenshots.takeScreenshot();
-		Thread.sleep(1000);
-
-
-		js.executeScript("window.scrollBy(0,630)");
-		//screenshots.takeScreenshot();
-		Thread.sleep(1000);
-
-
-		js.executeScript("window.scrollBy(0,550)");
-		//screenshots.takeScreenshot();
-		Thread.sleep(1000);
-
-		js.executeScript("window.scrollBy(0,500)");
-		 
 	}
 
 
@@ -181,7 +150,7 @@ public class PomUSproduction {
 	public void ReportTab() throws InterruptedException {
 		pages.clickHome();
 		Thread.sleep(2000);
-		System.out.println("test");
+
 
 		pages.clickDashboard();
 		Thread.sleep(3000);
@@ -191,12 +160,12 @@ public class PomUSproduction {
 
 	@And ("^Clicks on Budget Head Report option from Select Report dropdown wrt US_Production$")
 	public void clickBudgetHeadReport() throws InterruptedException {
-		System.out.println("test");
 
-				pages.clickSelectReportDropdown();
-				Thread.sleep(1000);
-				pages.clickBudgetHeadReport();
-				Thread.sleep(1000);
+
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickBudgetHeadReport();
+		Thread.sleep(1000);
 		logger.info("This is Budget Head Report page");
 
 	}
@@ -204,23 +173,23 @@ public class PomUSproduction {
 
 	@When ("^Clicks on Recognitions Report option from Select Report dropdown wrt US_Production$")
 	public void clickRecognitionsReport() throws InterruptedException {
-		System.out.println("test");
-				pages.clickSelectReportDropdown();
-				Thread.sleep(1000);
-				pages.clickRecognitionsReport();
-				Thread.sleep(5000);
+
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickRecognitionsReport();
+		Thread.sleep(5000);
 		logger.info("This is Recognitions Report page");
 
 	}
 
 	@And ("^Clicks on Redemption Report option from Select Report dropdown wrt US_Production$")
 	public void clickRedemptionReport() throws InterruptedException {
-		System.out.println("test");
 
-				pages.clickSelectReportDropdown();
-				Thread.sleep(1000);
-				pages.clickRedemptionReport();
-				Thread.sleep(3000);
+
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickRedemptionReport();
+		Thread.sleep(3000);
 		logger.info("This is Redemption Report page");
 
 	}
@@ -228,12 +197,12 @@ public class PomUSproduction {
 	@When ("^Clicks on User Login Report option from Select Report dropdown wrt US_Production$")
 	public void clickUserLoginReport() throws InterruptedException {
 
-		System.out.println("test");
 
-				pages.clickSelectReportDropdown();
-				Thread.sleep(1000);
-				pages.clickUserLoginReport();
-		
+
+		pages.clickSelectReportDropdown();
+		Thread.sleep(1000);
+		pages.clickUserLoginReport();
+
 		logger.info("This is User Login Report page");
 
 	}
@@ -242,22 +211,22 @@ public class PomUSproduction {
 	@And ("^Clicks on Data Visualization tab wrt US_Production$")
 	public void dataVisualizationTab() throws InterruptedException {
 
-		System.out.println("test");
 
-				pages.clickVisualization();
+
+		pages.clickVisualization();
 		logger.info("This is Data Visualization page");
 
 	}
 
 	// =========	 Admin Console Page  ========
-	
-	
+
+
 
 	@When ("^Clicks on Admin Console link wrt US_Production$")
 	public void adminConsole() throws InterruptedException, IOException {
-		System.out.println("test");
 
-		
+
+
 		pages.clickUserprofile();
 		Thread.sleep(2000);
 
@@ -273,9 +242,9 @@ public class PomUSproduction {
 		newTab.remove(currentTab);
 
 		driver.switchTo().window(newTab.get(0));
-		Thread.sleep(8000);
+		Thread.sleep(20000);
 
-		//screenshots.takeScreenshot();
+		
 		logger.info("This is Admin Console page");
 
 		driver.close();
@@ -284,7 +253,7 @@ public class PomUSproduction {
 		Thread.sleep(1500);
 
 		pages.clickUserprofile();
- 
+
 	}
 
 
