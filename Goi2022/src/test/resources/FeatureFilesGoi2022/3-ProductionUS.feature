@@ -17,6 +17,6 @@ Feature: To test all the pages on Goi Production-US environment
     And Clicks on Redemption Report option from Select Report dropdown wrt US_Production
     When Clicks on User Login Report option from Select Report dropdown wrt US_Production
     And Clicks on Data Visualization tab wrt US_Production
-    #When Clicks on Admin Console link wrt US_Production
+    When Clicks on Admin Console link wrt US_Production
     And Clicks on LogOut link wrt US_Production
     Then User is navigated to login page wrt US_Production

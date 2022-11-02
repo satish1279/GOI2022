@@ -17,6 +17,6 @@ Feature: To test all the pages on Goi Production-India environment
     And Clicks on Redemption Report option from Select Report dropdown wrt Ind_Production
     When Clicks on User Login Report option from Select Report dropdown wrt Ind_Production
     And Clicks on Data Visualization tab wrt Ind_Production
-    #When Clicks on Admin Console link wrt Ind_Production
+    When Clicks on Admin Console link wrt Ind_Production
     And Clicks on LogOut link wrt Ind_Production
     Then User is navigated to login page wrt Ind_Production
