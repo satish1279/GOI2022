@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features= {"./src/test/resources/FeatureFilesGoi2022"},
 		glue= {"stepDefinitionsGoi2022", "hooks"},
-		tags= "@Staging",
+		//tags= "@Staging",
 		plugin= {"pretty"}
 		//	dryRun = true
 
