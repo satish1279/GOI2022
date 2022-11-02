@@ -35,3 +35,24 @@
 [INFO ] 2022-11-02 15:23:31.538 [main] PomStaging - Browser Closed
 [INFO ] 2022-11-02 15:23:39.053 [main] PomINDproduction - Browser Started on Goi- India Production environment
 [INFO ] 2022-11-02 15:23:39.053 [main] PomINDproduction - This is login page
+[INFO ] 2022-11-02 16:05:01.562 [main] PomStaging -    Browser   Started   on   Goi  - Staging   environment
+[INFO ] 2022-11-02 16:05:01.572 [main] PomStaging - This is login page
+[INFO ] 2022-11-02 16:05:09.528 [main] PomStaging - This is Homepage page
+[INFO ] 2022-11-02 16:07:49.742 [main] PomStaging -    Browser   Started   on   Goi  - Staging   environment
+[INFO ] 2022-11-02 16:07:49.748 [main] PomStaging - This is login page
+[INFO ] 2022-11-02 16:07:57.729 [main] PomStaging - This is Homepage page
+[INFO ] 2022-11-02 16:08:25.289 [main] PomStaging - This is Recognize page
+[INFO ] 2022-11-02 16:08:32.073 [main] PomStaging - This is Wellness page
+[INFO ] 2022-11-02 16:08:38.506 [main] PomStaging - This is Survey page
+[INFO ] 2022-11-02 16:08:45.848 [main] PomStaging - This is My Summary page
+[INFO ] 2022-11-02 16:08:56.418 [main] PomStaging - This is Redeem page
+[INFO ] 2022-11-02 16:09:06.503 [main] PomStaging - This is Dashboard page
+[INFO ] 2022-11-02 16:09:22.777 [main] PomStaging - This is Reports page
+[INFO ] 2022-11-02 16:09:29.640 [main] PomStaging - This is Budget Head Report page
+[INFO ] 2022-11-02 16:09:40.498 [main] PomStaging - This is Recognitions Report page
+[INFO ] 2022-11-02 16:09:49.252 [main] PomStaging - This is Redemption Report page
+[INFO ] 2022-11-02 16:09:55.113 [main] PomStaging - This is User Login Report page
+[INFO ] 2022-11-02 16:10:01.726 [main] PomStaging - This is Data Visualization page
+[INFO ] 2022-11-02 16:10:33.471 [main] PomStaging - This is Admin Console page
+[INFO ] 2022-11-02 16:10:46.915 [main] PomStaging - This is LogOut page
+[INFO ] 2022-11-02 16:10:52.696 [main] PomStaging - Browser Closed
