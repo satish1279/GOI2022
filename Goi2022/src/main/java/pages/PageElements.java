@@ -134,7 +134,7 @@ public class PageElements {
 	//============== Login ============//
 
 	public void entrUsernam() {
-		txt_usrname.sendKeys("satish.jaiswal@beyond360.com");
+		txt_usrname.sendKeys("");
 	}
 
 	public void entrPassword() {
